@@ -1,0 +1,44 @@
+#ifndef LOGINDIALOG_H
+#define LOGINDIALOG_H
+
+#include <QDialog>
+#include <QtWidgets>
+#include <QSqlDatabase>
+#include "define.h"
+
+namespace Ui {
+class LoginDialog;
+}
+
+class LoginDialog : public QDialog
+{
+    Q_OBJECT
+
+public:
+    explicit LoginDialog(QWidget *parent = 0);
+    ~LoginDialog();
+
+signals:
+     void LoginOK();
+
+protected:
+    void closeEvent(QCloseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+    void mousePressEvent(QMouseEvent *event);
+private slots:
+     void on_pushButton_Login_clicked();
+     void on_pushButton_Cancel_clicked();
+     void reject();
+
+private:
+    Ui::LoginDialog *ui;
+    bool IsReject;
+    int iXdifferent,iYdifferent;
+    bool b_MousePressed;
+
+    void DBInit();
+    bool isLogin(const QString &UserID, const QString &Password);
+};
+
+#endif // LOGINDIALOG_H

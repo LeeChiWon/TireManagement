@@ -1,1 +1,9 @@
-<RCC/>
+<RCC>
+    <qresource prefix="/">
+        <file>img/exit.png</file>
+        <file>img/tire.png</file>
+        <file>translator/Lang_ko_KR.qm</file>
+        <file>img/Screen.png</file>
+        <file>img/waiting.png</file>
+    </qresource>
+</RCC>
