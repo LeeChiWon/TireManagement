@@ -4,6 +4,8 @@
 #include <QDialog>
 #include <QtWidgets>
 #include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
 #include "define.h"
 
 namespace Ui {
@@ -36,8 +38,9 @@ private:
     bool IsReject;
     int iXdifferent,iYdifferent;
     bool b_MousePressed;
+    QSettings *Setting;
 
-    void DBInit();
+    bool DBInit(const QString &UserID, const QString &Password);
     bool isLogin(const QString &UserID, const QString &Password);
 };
 

@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     TrayIconInit();
+    SettingInit();
+    TabInit();
 }
 
 MainWindow::~MainWindow()
@@ -27,6 +29,32 @@ void MainWindow::TrayIconInit()
     TrayIcon->setToolTip(tr("TireManagement"));
     TrayIcon->showMessage(tr("TireManagement"),tr("Executing..."),QSystemTrayIcon::Information,5000);
     connect(TrayIcon,SIGNAL(activated(QSystemTrayIcon::ActivationReason)),this,SLOT(onSystemTryIconClicked(QSystemTrayIcon::ActivationReason)));
+}
+
+void MainWindow::SettingInit()
+{
+    Setting=new QSettings("EachOne","TireManagement",this);
+    restoreGeometry(Setting->value("config/Geometry").toByteArray());
+}
+
+void MainWindow::TabInit()
+{
+    ui->tabWidget->clear();
+    on_actionMain_triggered();
+}
+
+bool MainWindow::isTabEnabled(const QString &TabName)
+{
+    for(int i=0; i<ui->tabWidget->count(); i++)
+    {
+        if(ui->tabWidget->tabText(i)==TabName)
+        {
+            ui->tabWidget->setCurrentIndex(i);
+            return true;
+        }
+    }
+
+    return false;
 }
 
 void MainWindow::onSystemTryIconClicked(QSystemTrayIcon::ActivationReason reason){
@@ -60,5 +88,28 @@ void MainWindow::closeEvent(QCloseEvent *event)
     {
         TrayIcon->hide();
     }
+    Setting->setValue("config/Geometry",saveGeometry());
     QWidget::closeEvent(event);
+}
+
+void MainWindow::on_actionInformation_triggered()
+{
+    InformationDialog InformationDlg;
+    InformationDlg.exec();
+}
+
+void MainWindow::on_actionMain_triggered()
+{
+    if(!isTabEnabled(MENU_MAIN))
+    {
+        MainForm *mainForm=new MainForm;
+        ui->tabWidget->addTab(mainForm,MENU_MAIN);
+    }
+}
+
+void MainWindow::on_tabWidget_tabCloseRequested(int index)
+{
+    auto *Widget=ui->tabWidget->widget(index);
+    Widget->deleteLater();
+    ui->tabWidget->removeTab(index);
 }

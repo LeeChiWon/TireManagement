@@ -1,6 +1,9 @@
 #include "logindialog.h"
 #include "ui_logindialog.h"
 
+QString g_UserID;
+QString g_Password;
+
 LoginDialog::LoginDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::LoginDialog),
@@ -15,18 +18,57 @@ LoginDialog::~LoginDialog()
     delete ui;
 }
 
-void LoginDialog::DBInit()
+bool LoginDialog::DBInit(const QString &UserID, const QString &Password)
 {
-
-}
-
-bool LoginDialog::isLogin(const QString &UserID, const QString &Password)
-{
-    if(UserID!=MASTER_ID || Password!=MASTER_PASSWORD)
+    Setting=new QSettings("EachOne","TireManagement",this);
+    if(!Setting->value("config/DBPath").toString().isEmpty())
     {
+        QMessageBox::critical(this,tr("Error"),tr("DB is not found."));
         return false;
     }
-    return true;
+
+    QSqlDatabase DB=QSqlDatabase::addDatabase("QSQLITE","DB");
+    DB.setDatabaseName(Setting->value("config/DBPath").toString());
+
+    if(!DB.open())
+    {
+        QMessageBox::critical(this,tr("Error"),tr("DB Open Failed."));
+        QSqlDatabase::removeDatabase("DB");
+        return false;
+    }
+
+    QSqlQuery query(DB);
+    QString QueryStr=QString("select * from login_tb where user_id='%1' and password='%2'").arg(UserID,Password);
+    query.exec(QueryStr);
+    if(query.next())
+    {
+        DB.close();
+        g_UserID=UserID;
+        g_Password=Password;
+        return true;
+    }
+    if(query.lastError().number()>QSqlError::NoError)
+    {
+        QString ErrorText=QString("%1 - %2").arg(query.lastError().number()).arg(query.lastError().text());
+        QMessageBox::critical(this,tr("DB Error"),ErrorText);
+        QSqlDatabase::removeDatabase("DB");
+    }
+    DB.close();
+    return false;
+}
+
+
+bool LoginDialog::isLogin(const QString &UserID, const QString &Password)
+{    
+    if(UserID==MASTER_ID)
+    {
+        if(Password==MASTER_PASSWORD)
+        {
+            return true;
+        }
+        return false;
+    }
+    return DBInit(UserID,Password);
 }
 
 void LoginDialog::on_pushButton_Login_clicked()

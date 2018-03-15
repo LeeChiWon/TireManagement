@@ -25,14 +25,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    logindialog.cpp
+    logindialog.cpp \
+    informationdialog.cpp \
+    mainform.cpp \
+    configurationform.cpp
 
 HEADERS  += mainwindow.h \
     logindialog.h \
-    define.h
+    define.h \
+    informationdialog.h \
+    mainform.h \
+    configurationform.h
 
 FORMS    += mainwindow.ui \
-    logindialog.ui
+    logindialog.ui \
+    informationdialog.ui \
+    mainform.ui \
+    configurationform.ui
 
 RESOURCES += \
     tiremanagement.qrc

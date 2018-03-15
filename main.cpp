@@ -28,10 +28,10 @@ int main(int argc, char *argv[])
     QSplashScreen *splashScreen=new QSplashScreen;
     splashScreen->setPixmap(QPixmap(":/img/waiting.png"));
     splashScreen->show();
-    QTimer::singleShot(1500,splashScreen,SLOT(close()));
+    QTimer::singleShot(1000,splashScreen,SLOT(close()));
     LoginDialog loginDlg;
     QObject::connect(&loginDlg,SIGNAL(LoginOK()),&w,SLOT(show()));
-    QTimer::singleShot(1500,&loginDlg,SLOT(show()));
+    QTimer::singleShot(1000,&loginDlg,SLOT(show()));
 
    // loginDlg.show();
     return a.exec();
