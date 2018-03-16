@@ -3,9 +3,6 @@
 
 #include <QDialog>
 #include <QtWidgets>
-#include <QSqlDatabase>
-#include <QSqlQuery>
-#include <QSqlError>
 #include "define.h"
 
 namespace Ui {

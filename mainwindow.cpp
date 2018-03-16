@@ -3,7 +3,7 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),ApplicationExitType(0)
 {
     ui->setupUi(this);
     TrayIconInit();
@@ -69,8 +69,8 @@ void MainWindow::onSystemTryIconClicked(QSystemTrayIcon::ActivationReason reason
 }
 
 void MainWindow::on_actionExit_triggered()
-{
-    this->hide();
+{    
+    ApplicationExitType=APPLICATION_EXIT;
     this->close();
 }
 
@@ -84,11 +84,34 @@ void MainWindow::hideEvent(QHideEvent *event)
 }
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    if(TrayIcon->isVisible())
-    {
-        TrayIcon->hide();
+    event->ignore();
+    int ret;
+    switch (ApplicationExitType) {
+    case APPLICATION_EXIT:
+        ret= QMessageBox::information(this, tr("Exit"),
+                                       tr("Are you exit application?"),
+                                       QMessageBox::Ok| QMessageBox::Cancel,
+                                       QMessageBox::Ok);
+        break;
+    default:
+        ret= QMessageBox::information(this, tr("Logout"),
+                                       tr("Are you Logout application?"),
+                                       QMessageBox::Ok| QMessageBox::Cancel,
+                                       QMessageBox::Ok);
+        break;
     }
-    Setting->setValue("config/Geometry",saveGeometry());
+
+    switch(ret)
+    {
+    case QMessageBox::Ok:
+        if(TrayIcon->isVisible())
+        {
+            TrayIcon->hide();
+        }
+        Setting->setValue("config/Geometry",saveGeometry());
+        event->accept();
+        break;
+    }
     QWidget::closeEvent(event);
 }
 
@@ -112,4 +135,18 @@ void MainWindow::on_tabWidget_tabCloseRequested(int index)
     auto *Widget=ui->tabWidget->widget(index);
     Widget->deleteLater();
     ui->tabWidget->removeTab(index);
+}
+
+void MainWindow::on_actionConfiguration_triggered()
+{
+    ConfigurationForm ConfigurationDlg;
+    ConfigurationDlg.exec();
+}
+
+void MainWindow::on_actionLogout_triggered()
+{
+    ApplicationExitType=APPLICATION_LOGOUT;
+    this->close();
+    QString newfilename = QString("%1").arg(QApplication::applicationFilePath());
+    QDesktopServices::openUrl(QUrl(newfilename.prepend( "file:///" )));
 }

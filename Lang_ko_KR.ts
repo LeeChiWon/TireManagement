@@ -2,6 +2,86 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ko_KR">
 <context>
+    <name>ConfigurationForm</name>
+    <message>
+        <location filename="configurationform.ui" line="26"/>
+        <source>Configuration</source>
+        <translation>환경설정</translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="46"/>
+        <source>Database</source>
+        <translation>데이터베이스 </translation>
+    </message>
+    <message>
+        <source>Database Path</source>
+        <translation type="vanished">데이터베이스 경로</translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="58"/>
+        <location filename="configurationform.ui" line="148"/>
+        <source>Path</source>
+        <translation>경로</translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="83"/>
+        <location filename="configurationform.ui" line="161"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="97"/>
+        <source>Backup</source>
+        <translation>백업</translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="112"/>
+        <source>Cycle</source>
+        <translation>주기</translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="190"/>
+        <source>Ok</source>
+        <translation>Ok</translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="203"/>
+        <source>Cancel</source>
+        <translation>취소</translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="54"/>
+        <source>Hour</source>
+        <translation>시</translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="54"/>
+        <source>Day</source>
+        <translation>일</translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="54"/>
+        <source>Week</source>
+        <translation>주</translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="54"/>
+        <source>Month</source>
+        <translation>달</translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="54"/>
+        <source>Year</source>
+        <translation>년</translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="67"/>
+        <location filename="configurationform.cpp" line="72"/>
+        <source>Choose Directory</source>
+        <translation>디렉토리 선택</translation>
+    </message>
+</context>
+<context>
     <name>InformationDialog</name>
     <message>
         <location filename="informationdialog.ui" line="26"/>
@@ -41,7 +121,7 @@ Developer : EachOne</source>
     <message>
         <location filename="logindialog.ui" line="29"/>
         <location filename="logindialog.ui" line="125"/>
-        <location filename="logindialog.cpp" line="80"/>
+        <location filename="logindialog.cpp" line="84"/>
         <source>Login</source>
         <translation>로그인</translation>
     </message>
@@ -87,7 +167,7 @@ Developer : EachOne</source>
         <translation>데이터베이스 에러</translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="80"/>
+        <location filename="logindialog.cpp" line="84"/>
         <source>UserID or Password is incorrect.</source>
         <translation>사용자ID 또는 비밀번호가 맞지 않습니다.</translation>
     </message>
@@ -96,8 +176,8 @@ Developer : EachOne</source>
     <name>MainForm</name>
     <message>
         <location filename="mainform.ui" line="14"/>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
+        <source>Main</source>
+        <translation>메인</translation>
     </message>
 </context>
 <context>
@@ -110,50 +190,62 @@ Developer : EachOne</source>
         <translation>타이어매장관리</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="57"/>
-        <source>Tab 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="75"/>
+        <location filename="mainwindow.ui" line="70"/>
         <source>Menu</source>
         <translation>메뉴</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="119"/>
+        <location filename="mainwindow.ui" line="115"/>
+        <location filename="mainwindow.cpp" line="91"/>
         <source>Exit</source>
         <translation>종료</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="122"/>
+        <location filename="mainwindow.ui" line="118"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="131"/>
+        <location filename="mainwindow.ui" line="127"/>
         <source>Configuration</source>
         <translation>환경설정</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="134"/>
+        <location filename="mainwindow.ui" line="130"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="143"/>
+        <location filename="mainwindow.ui" line="139"/>
         <source>Info</source>
         <translation>프로그램정보</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="152"/>
-        <location filename="mainwindow.ui" line="155"/>
+        <location filename="mainwindow.ui" line="148"/>
+        <location filename="mainwindow.ui" line="151"/>
         <source>Main</source>
         <translation>메인</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="160"/>
+        <location filename="mainwindow.cpp" line="97"/>
+        <source>Logout</source>
+        <translation>로그아웃</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="30"/>
         <source>Executing...</source>
         <translation>실행중입니다...</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="92"/>
+        <source>Are you exit application?</source>
+        <translation>프로그램을 종료 하시겠습니까?</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="98"/>
+        <source>Are you Logout application?</source>
+        <translation>프로그램을 로그아웃 하시겠습니까?</translation>
     </message>
 </context>
 <context>

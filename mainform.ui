@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Main</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="tiremanagement.qrc">
+    <normaloff>:/img/home.png</normaloff>:/img/home.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="leftMargin">

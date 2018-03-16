@@ -70,6 +70,7 @@
      <string>Menu</string>
     </property>
     <addaction name="actionConfiguration"/>
+    <addaction name="actionLogout"/>
     <addaction name="separator"/>
     <addaction name="actionInformation"/>
     <addaction name="separator"/>
@@ -148,6 +149,15 @@
    </property>
    <property name="toolTip">
     <string>Main</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="icon">
+    <iconset resource="tiremanagement.qrc">
+     <normaloff>:/img/logout.png</normaloff>:/img/logout.png</iconset>
+   </property>
+   <property name="text">
+    <string>Logout</string>
    </property>
   </action>
  </widget>

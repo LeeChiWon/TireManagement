@@ -2,6 +2,82 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="en_US">
 <context>
+    <name>ConfigurationForm</name>
+    <message>
+        <location filename="configurationform.ui" line="26"/>
+        <source>Configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="46"/>
+        <source>Database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="58"/>
+        <location filename="configurationform.ui" line="148"/>
+        <source>Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="83"/>
+        <location filename="configurationform.ui" line="161"/>
+        <source>...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="97"/>
+        <source>Backup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="112"/>
+        <source>Cycle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="190"/>
+        <source>Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.ui" line="203"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="54"/>
+        <source>Hour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="54"/>
+        <source>Day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="54"/>
+        <source>Week</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="54"/>
+        <source>Month</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="54"/>
+        <source>Year</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="67"/>
+        <location filename="configurationform.cpp" line="72"/>
+        <source>Choose Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InformationDialog</name>
     <message>
         <location filename="informationdialog.ui" line="26"/>
@@ -39,7 +115,7 @@ Developer : EachOne</source>
     <message>
         <location filename="logindialog.ui" line="29"/>
         <location filename="logindialog.ui" line="125"/>
-        <location filename="logindialog.cpp" line="80"/>
+        <location filename="logindialog.cpp" line="84"/>
         <source>Login</source>
         <translation type="unfinished"></translation>
     </message>
@@ -85,7 +161,7 @@ Developer : EachOne</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="80"/>
+        <location filename="logindialog.cpp" line="84"/>
         <source>UserID or Password is incorrect.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -94,7 +170,7 @@ Developer : EachOne</source>
     <name>MainForm</name>
     <message>
         <location filename="mainform.ui" line="14"/>
-        <source>Form</source>
+        <source>Main</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -108,49 +184,61 @@ Developer : EachOne</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="57"/>
-        <source>Tab 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="75"/>
+        <location filename="mainwindow.ui" line="70"/>
         <source>Menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="119"/>
+        <location filename="mainwindow.ui" line="115"/>
+        <location filename="mainwindow.cpp" line="91"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="122"/>
+        <location filename="mainwindow.ui" line="118"/>
         <source>Ctrl+X</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="131"/>
+        <location filename="mainwindow.ui" line="127"/>
         <source>Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="134"/>
+        <location filename="mainwindow.ui" line="130"/>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="143"/>
+        <location filename="mainwindow.ui" line="139"/>
         <source>Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="152"/>
-        <location filename="mainwindow.ui" line="155"/>
+        <location filename="mainwindow.ui" line="148"/>
+        <location filename="mainwindow.ui" line="151"/>
         <source>Main</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="160"/>
+        <location filename="mainwindow.cpp" line="97"/>
+        <source>Logout</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="30"/>
         <source>Executing...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="92"/>
+        <source>Are you exit application?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="98"/>
+        <source>Are you Logout application?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

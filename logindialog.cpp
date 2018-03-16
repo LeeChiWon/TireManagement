@@ -21,14 +21,14 @@ LoginDialog::~LoginDialog()
 bool LoginDialog::DBInit(const QString &UserID, const QString &Password)
 {
     Setting=new QSettings("EachOne","TireManagement",this);
-    if(!Setting->value("config/DBPath").toString().isEmpty())
+    if(!Setting->value("config/Database/Path").toString().isEmpty())
     {
         QMessageBox::critical(this,tr("Error"),tr("DB is not found."));
         return false;
     }
 
     QSqlDatabase DB=QSqlDatabase::addDatabase("QSQLITE","DB");
-    DB.setDatabaseName(Setting->value("config/DBPath").toString());
+    DB.setDatabaseName(Setting->value("config/Database/Path").toString());
 
     if(!DB.open())
     {

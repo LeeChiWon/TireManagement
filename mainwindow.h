@@ -6,6 +6,7 @@
 #include "define.h"
 #include "informationdialog.h"
 #include "mainform.h"
+#include "configurationform.h"
 
 namespace Ui {
 class MainWindow;
@@ -25,6 +26,9 @@ private slots:
     void on_actionInformation_triggered();
     void on_actionMain_triggered();
     void on_tabWidget_tabCloseRequested(int index);
+    void on_actionConfiguration_triggered();
+
+    void on_actionLogout_triggered();
 
 private:
     void closeEvent(QCloseEvent *event);
@@ -35,6 +39,7 @@ private:
     QSystemTrayIcon *TrayIcon;
     QMenu *TrayIconMenu;
     QSettings *Setting;
+    int ApplicationExitType;
 
     void TrayIconInit();
     void SettingInit();
