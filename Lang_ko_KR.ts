@@ -50,33 +50,33 @@
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="configurationform.cpp" line="54"/>
+        <location filename="configurationform.cpp" line="58"/>
         <source>Hour</source>
         <translation>시</translation>
     </message>
     <message>
-        <location filename="configurationform.cpp" line="54"/>
+        <location filename="configurationform.cpp" line="58"/>
         <source>Day</source>
         <translation>일</translation>
     </message>
     <message>
-        <location filename="configurationform.cpp" line="54"/>
+        <location filename="configurationform.cpp" line="58"/>
         <source>Week</source>
         <translation>주</translation>
     </message>
     <message>
-        <location filename="configurationform.cpp" line="54"/>
+        <location filename="configurationform.cpp" line="58"/>
         <source>Month</source>
         <translation>달</translation>
     </message>
     <message>
-        <location filename="configurationform.cpp" line="54"/>
+        <location filename="configurationform.cpp" line="58"/>
         <source>Year</source>
         <translation>년</translation>
     </message>
     <message>
-        <location filename="configurationform.cpp" line="67"/>
-        <location filename="configurationform.cpp" line="72"/>
+        <location filename="configurationform.cpp" line="103"/>
+        <location filename="configurationform.cpp" line="108"/>
         <source>Choose Directory</source>
         <translation>디렉토리 선택</translation>
     </message>

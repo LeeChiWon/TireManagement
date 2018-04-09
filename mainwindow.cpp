@@ -112,7 +112,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
         event->accept();
         break;
     }
-    QWidget::closeEvent(event);
+   // QWidget::closeEvent(event);
 }
 
 void MainWindow::on_actionInformation_triggered()

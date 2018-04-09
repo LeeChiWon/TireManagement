@@ -72,7 +72,7 @@ void ConfigurationForm::DBCreate()
     {
         QSqlDatabase DB=QSqlDatabase::addDatabase("QSQLITE","DB");
         DB.setDatabaseName(Setting->value("config/Database/Path").toString());
-
+        qDebug()<<Setting->value("config/Database/Path").toString();
         if(!DB.open())
         {
             QSqlDatabase::removeDatabase("DB");
@@ -91,6 +91,7 @@ void ConfigurationForm::DBCreate()
 bool ConfigurationForm::IsDatabase()
 {
     QFileInfo FileInfo(Setting->value("config/Database/Path").toString());
+
     if(!FileInfo.exists())
     {
         return false;
@@ -100,7 +101,7 @@ bool ConfigurationForm::IsDatabase()
 
 void ConfigurationForm::on_pushButton_Database_Path_clicked()
 {
-    ui->lineEdit_Database_Path->setText(QFileDialog::getExistingDirectory(this,tr("Choose Directory"),NULL,QFileDialog::ShowDirsOnly));
+    ui->lineEdit_Database_Path->setText(QFileDialog::getSaveFileName(this,tr("DB File"),NULL,"DB File(*.db)"));
 }
 
 void ConfigurationForm::on_pushButton_Database_BackupPath_clicked()
