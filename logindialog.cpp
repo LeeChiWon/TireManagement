@@ -11,6 +11,7 @@ LoginDialog::LoginDialog(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowFlags(Qt::FramelessWindowHint);
+    crypto.setKey(Q_UINT64_C(0x010a020b030c));
 }
 
 LoginDialog::~LoginDialog()
@@ -20,8 +21,8 @@ LoginDialog::~LoginDialog()
 
 bool LoginDialog::DBInit(const QString &UserID, const QString &Password)
 {
-    Setting=new QSettings("EachOne","TireManagement",this);
-    if(!Setting->value("config/Database/Path").toString().isEmpty())
+    Setting=new QSettings("EachOne","TireManagement",this);   
+    if(Setting->value("config/Database/Path").toString().isEmpty())
     {
         QMessageBox::critical(this,tr("Error"),tr("DB is not found."));
         return false;
@@ -38,22 +39,41 @@ bool LoginDialog::DBInit(const QString &UserID, const QString &Password)
     }
 
     QSqlQuery query(DB);
-    QString QueryStr=QString("select * from login_tb where user_id='%1' and password='%2'").arg(UserID,Password);
-    query.exec(QueryStr);
-    if(query.next())
+    query.exec(QString("select password from login_tb where UserID='%1'").arg(UserID));
+    if(!query.next())
     {
         DB.close();
-        g_UserID=UserID;
-        g_Password=Password;
-        return true;
+        return false;
     }
+
     if(query.lastError().number()>QSqlError::NoError)
     {
         QString ErrorText=QString("%1 - %2").arg(query.lastError().number()).arg(query.lastError().text());
         QMessageBox::critical(this,tr("DB Error"),ErrorText);
         QSqlDatabase::removeDatabase("DB");
     }
+
+    QString DecryptPassword=crypto.decryptToString(query.value("password").toString());
+
     DB.close();
+    qDebug()<<Password<<DecryptPassword;
+    return Password!=DecryptPassword? false:true;
+
+
+    /*QString QueryStr=QString("select * from login_tb where UserID='%1' and password='%2'").arg(UserID,crypto.encryptToString(ui->lineEdit_Password->text()));
+
+    query.exec(QueryStr);
+    if(query.next())
+    {
+        DB.close();
+        g_UserID=UserID;
+        //g_Password=Password;
+        g_Password=Password;
+        return true;
+    }
+
+
+    DB.close();*/
     return false;
 }
 

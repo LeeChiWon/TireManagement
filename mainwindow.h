@@ -7,6 +7,7 @@
 #include "informationdialog.h"
 #include "mainform.h"
 #include "configurationform.h"
+#include "adminmodedialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -30,6 +31,8 @@ private slots:
 
     void on_actionLogout_triggered();
 
+    void on_actionAdminMode_triggered();
+
 private:
     void closeEvent(QCloseEvent *event);
     void hideEvent(QHideEvent *event);
@@ -45,6 +48,7 @@ private:
     void SettingInit();
     void TabInit();
     bool isTabEnabled(const QString &TabName);
+    bool isAdmin();
 };
 
 #endif // MAINWINDOW_H

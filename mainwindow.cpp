@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     TrayIconInit();
     SettingInit();
     TabInit();
+    ui->actionAdminMode->setVisible(isAdmin());
 }
 
 MainWindow::~MainWindow()
@@ -53,8 +54,17 @@ bool MainWindow::isTabEnabled(const QString &TabName)
             return true;
         }
     }
-
     return false;
+}
+
+bool MainWindow::isAdmin()
+{
+    return g_UserID==MASTER_ID? false:true;
+   /* if(g_UserID==MASTER_ID)
+    {
+        return true;
+    }
+    return false;*/
 }
 
 void MainWindow::onSystemTryIconClicked(QSystemTrayIcon::ActivationReason reason){
@@ -149,4 +159,10 @@ void MainWindow::on_actionLogout_triggered()
     this->close();
     QString newfilename = QString("%1").arg(QApplication::applicationFilePath());
     QDesktopServices::openUrl(QUrl(newfilename.prepend( "file:///" )));
+}
+
+void MainWindow::on_actionAdminMode_triggered()
+{
+    AdminModeDialog adminDlg;
+    adminDlg.exec();
 }

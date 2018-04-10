@@ -74,6 +74,7 @@
     <addaction name="separator"/>
     <addaction name="actionInformation"/>
     <addaction name="separator"/>
+    <addaction name="actionAdminMode"/>
     <addaction name="actionExit"/>
    </widget>
    <addaction name="menuMenu"/>
@@ -158,6 +159,18 @@
    </property>
    <property name="text">
     <string>Logout</string>
+   </property>
+  </action>
+  <action name="actionAdminMode">
+   <property name="icon">
+    <iconset resource="tiremanagement.qrc">
+     <normaloff>:/img/administrator.png</normaloff>:/img/administrator.png</iconset>
+   </property>
+   <property name="text">
+    <string>AdminMode</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
    </property>
   </action>
  </widget>

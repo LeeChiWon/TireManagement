@@ -5,6 +5,7 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QSqlQueryModel>
 
 #define MASTER_ID "admin"
 #define MASTER_PASSWORD "admin"

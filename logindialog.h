@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QtWidgets>
 #include "define.h"
+#include "simplecrypt.h"
 
 namespace Ui {
 class LoginDialog;
@@ -36,6 +37,7 @@ private:
     int iXdifferent,iYdifferent;
     bool b_MousePressed;
     QSettings *Setting;
+    SimpleCrypt crypto;
 
     bool DBInit(const QString &UserID, const QString &Password);
     bool isLogin(const QString &UserID, const QString &Password);

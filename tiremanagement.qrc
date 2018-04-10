@@ -9,5 +9,6 @@
         <file>img/settings.png</file>
         <file>img/home.png</file>
         <file>img/logout.png</file>
+        <file>img/administrator.png</file>
     </qresource>
 </RCC>

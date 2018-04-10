@@ -28,20 +28,25 @@ SOURCES += main.cpp\
     logindialog.cpp \
     informationdialog.cpp \
     mainform.cpp \
-    configurationform.cpp
+    configurationform.cpp \
+    adminmodedialog.cpp \
+    simplecrypt.cpp
 
 HEADERS  += mainwindow.h \
     logindialog.h \
     define.h \
     informationdialog.h \
     mainform.h \
-    configurationform.h
+    configurationform.h \
+    adminmodedialog.h \
+    simplecrypt.h
 
 FORMS    += mainwindow.ui \
     logindialog.ui \
     informationdialog.ui \
     mainform.ui \
-    configurationform.ui
+    configurationform.ui \
+    adminmodedialog.ui
 
 RESOURCES += \
     tiremanagement.qrc
