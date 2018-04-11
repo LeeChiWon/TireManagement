@@ -2,6 +2,78 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ko_KR">
 <context>
+    <name>AdminModeDialog</name>
+    <message>
+        <location filename="adminmodedialog.ui" line="26"/>
+        <source>AdminMode</source>
+        <translation>관리자모드</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="55"/>
+        <source>Modify</source>
+        <translation>수정</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="68"/>
+        <source>New</source>
+        <translation>추가</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="81"/>
+        <source>LoginInfo</source>
+        <translation>로그인정보</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="122"/>
+        <location filename="adminmodedialog.cpp" line="81"/>
+        <source>Password</source>
+        <translation>비밀번호</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="135"/>
+        <location filename="adminmodedialog.cpp" line="80"/>
+        <source>UserID</source>
+        <translation>사용자ID</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="152"/>
+        <source>Delete</source>
+        <translation>삭제</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="165"/>
+        <source>Find</source>
+        <translation>찾기</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="178"/>
+        <source>Return</source>
+        <translation>새로고침</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.cpp" line="36"/>
+        <location filename="adminmodedialog.cpp" line="73"/>
+        <source>Error</source>
+        <translation>에러</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.cpp" line="36"/>
+        <location filename="adminmodedialog.cpp" line="94"/>
+        <source>UserID is duplicate.</source>
+        <translation>중복된 아이디 입니다.</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.cpp" line="73"/>
+        <source>DB Open Failed.</source>
+        <translation>데이터베이스를 열 수 없습니다.</translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.cpp" line="94"/>
+        <source>Warning</source>
+        <translation>경고</translation>
+    </message>
+</context>
+<context>
     <name>ConfigurationForm</name>
     <message>
         <location filename="configurationform.ui" line="26"/>
@@ -75,8 +147,12 @@
         <translation>년</translation>
     </message>
     <message>
-        <location filename="configurationform.cpp" line="103"/>
-        <location filename="configurationform.cpp" line="108"/>
+        <location filename="configurationform.cpp" line="104"/>
+        <source>DB File</source>
+        <translation>데이터베이스 파일</translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="109"/>
         <source>Choose Directory</source>
         <translation>디렉토리 선택</translation>
     </message>
@@ -121,7 +197,7 @@ Developer : EachOne</source>
     <message>
         <location filename="logindialog.ui" line="29"/>
         <location filename="logindialog.ui" line="125"/>
-        <location filename="logindialog.cpp" line="84"/>
+        <location filename="logindialog.cpp" line="102"/>
         <source>Login</source>
         <translation>로그인</translation>
     </message>
@@ -146,28 +222,28 @@ Developer : EachOne</source>
         <translation>타이어 매장관리 프로그램</translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="26"/>
-        <location filename="logindialog.cpp" line="35"/>
+        <location filename="logindialog.cpp" line="27"/>
+        <location filename="logindialog.cpp" line="36"/>
         <source>Error</source>
         <translation>에러</translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="26"/>
+        <location filename="logindialog.cpp" line="27"/>
         <source>DB is not found.</source>
         <translation>데이터베이스를 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="35"/>
+        <location filename="logindialog.cpp" line="36"/>
         <source>DB Open Failed.</source>
         <translation>데이터베이스를 열 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="53"/>
+        <location filename="logindialog.cpp" line="52"/>
         <source>DB Error</source>
         <translation>데이터베이스 에러</translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="84"/>
+        <location filename="logindialog.cpp" line="102"/>
         <source>UserID or Password is incorrect.</source>
         <translation>사용자ID 또는 비밀번호가 맞지 않습니다.</translation>
     </message>
@@ -184,8 +260,8 @@ Developer : EachOne</source>
     <name>MainWindow</name>
     <message>
         <location filename="mainwindow.ui" line="21"/>
-        <location filename="mainwindow.cpp" line="29"/>
         <location filename="mainwindow.cpp" line="30"/>
+        <location filename="mainwindow.cpp" line="31"/>
         <source>TireManagement</source>
         <translation>타이어매장관리</translation>
     </message>
@@ -195,55 +271,60 @@ Developer : EachOne</source>
         <translation>메뉴</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="115"/>
-        <location filename="mainwindow.cpp" line="91"/>
+        <location filename="mainwindow.ui" line="116"/>
+        <location filename="mainwindow.cpp" line="101"/>
         <source>Exit</source>
         <translation>종료</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="118"/>
+        <location filename="mainwindow.ui" line="119"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="127"/>
+        <location filename="mainwindow.ui" line="128"/>
         <source>Configuration</source>
         <translation>환경설정</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="130"/>
+        <location filename="mainwindow.ui" line="131"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="139"/>
+        <location filename="mainwindow.ui" line="140"/>
         <source>Info</source>
         <translation>프로그램정보</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="148"/>
-        <location filename="mainwindow.ui" line="151"/>
+        <location filename="mainwindow.ui" line="149"/>
+        <location filename="mainwindow.ui" line="152"/>
         <source>Main</source>
         <translation>메인</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="160"/>
-        <location filename="mainwindow.cpp" line="97"/>
+        <location filename="mainwindow.ui" line="161"/>
+        <location filename="mainwindow.cpp" line="107"/>
         <source>Logout</source>
         <translation>로그아웃</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="30"/>
+        <location filename="mainwindow.ui" line="170"/>
+        <source>AdminMode</source>
+        <translation>관리자모드</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="31"/>
         <source>Executing...</source>
         <translation>실행중입니다...</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="92"/>
+        <location filename="mainwindow.cpp" line="102"/>
         <source>Are you exit application?</source>
         <translation>프로그램을 종료 하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="98"/>
+        <location filename="mainwindow.cpp" line="108"/>
         <source>Are you Logout application?</source>
         <translation>프로그램을 로그아웃 하시겠습니까?</translation>
     </message>

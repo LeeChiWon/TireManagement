@@ -24,6 +24,7 @@ private slots:
     void on_pushButton_Delete_clicked();
     void on_pushButton_Find_clicked();
     void on_pushButton_Return_clicked();
+    void on_tableView_clicked(const QModelIndex &index);
 
 private:
     Ui::AdminModeDialog *ui;
@@ -35,6 +36,7 @@ private:
     void TableViewInit();
     bool isUserIDCheck();
     void refreshModel();
+    void QueryExec(const QString &QueryStr);
 };
 
 #endif // ADMINMODEDIALOG_H

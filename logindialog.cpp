@@ -55,7 +55,11 @@ bool LoginDialog::DBInit(const QString &UserID, const QString &Password)
 
     QString DecryptPassword=crypto.decryptToString(query.value("password").toString());
 
-    DB.close();
+    DB.close();    
+    if(Password==DecryptPassword)
+    {
+        g_UserID=UserID;
+    }
     return Password!=DecryptPassword? false:true;
 
     /*QString QueryStr=QString("select * from login_tb where UserID='%1' and password='%2'").arg(UserID,crypto.encryptToString(ui->lineEdit_Password->text()));
@@ -82,6 +86,7 @@ bool LoginDialog::isLogin(const QString &UserID, const QString &Password)
     {
         if(Password==MASTER_PASSWORD)
         {
+            g_UserID=UserID;
             return true;
         }
         return false;

@@ -72,7 +72,7 @@ void ConfigurationForm::DBCreate()
     {
         QSqlDatabase DB=QSqlDatabase::addDatabase("QSQLITE","DB");
         DB.setDatabaseName(Setting->value("config/Database/Path").toString());
-        qDebug()<<Setting->value("config/Database/Path").toString();
+       // qDebug()<<Setting->value("config/Database/Path").toString();
         if(!DB.open())
         {
             QSqlDatabase::removeDatabase("DB");

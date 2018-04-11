@@ -8,8 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     TrayIconInit();
     SettingInit();
-    TabInit();
-    ui->actionAdminMode->setVisible(isAdmin());
+    TabInit();    
 }
 
 MainWindow::~MainWindow()
@@ -59,12 +58,9 @@ bool MainWindow::isTabEnabled(const QString &TabName)
 
 bool MainWindow::isAdmin()
 {
-    return g_UserID==MASTER_ID? false:true;
-   /* if(g_UserID==MASTER_ID)
-    {
-        return true;
-    }
-    return false;*/
+    qDebug()<<g_UserID;
+    ui->actionAdminMode->setVisible(g_UserID==MASTER_ID? true:false);
+    return g_UserID==MASTER_ID? true:false;
 }
 
 void MainWindow::onSystemTryIconClicked(QSystemTrayIcon::ActivationReason reason){

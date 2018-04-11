@@ -2,6 +2,78 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="en_US">
 <context>
+    <name>AdminModeDialog</name>
+    <message>
+        <location filename="adminmodedialog.ui" line="26"/>
+        <source>AdminMode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="55"/>
+        <source>Modify</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="68"/>
+        <source>New</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="81"/>
+        <source>LoginInfo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="122"/>
+        <location filename="adminmodedialog.cpp" line="81"/>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="135"/>
+        <location filename="adminmodedialog.cpp" line="80"/>
+        <source>UserID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="152"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="165"/>
+        <source>Find</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.ui" line="178"/>
+        <source>Return</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.cpp" line="36"/>
+        <location filename="adminmodedialog.cpp" line="73"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.cpp" line="36"/>
+        <location filename="adminmodedialog.cpp" line="94"/>
+        <source>UserID is duplicate.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.cpp" line="73"/>
+        <source>DB Open Failed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="adminmodedialog.cpp" line="94"/>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ConfigurationForm</name>
     <message>
         <location filename="configurationform.ui" line="26"/>
@@ -71,8 +143,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="configurationform.cpp" line="103"/>
-        <location filename="configurationform.cpp" line="108"/>
+        <location filename="configurationform.cpp" line="104"/>
+        <source>DB File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="configurationform.cpp" line="109"/>
         <source>Choose Directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -115,7 +191,7 @@ Developer : EachOne</source>
     <message>
         <location filename="logindialog.ui" line="29"/>
         <location filename="logindialog.ui" line="125"/>
-        <location filename="logindialog.cpp" line="84"/>
+        <location filename="logindialog.cpp" line="102"/>
         <source>Login</source>
         <translation type="unfinished"></translation>
     </message>
@@ -140,28 +216,28 @@ Developer : EachOne</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="26"/>
-        <location filename="logindialog.cpp" line="35"/>
+        <location filename="logindialog.cpp" line="27"/>
+        <location filename="logindialog.cpp" line="36"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="26"/>
+        <location filename="logindialog.cpp" line="27"/>
         <source>DB is not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="35"/>
+        <location filename="logindialog.cpp" line="36"/>
         <source>DB Open Failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="53"/>
+        <location filename="logindialog.cpp" line="52"/>
         <source>DB Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="logindialog.cpp" line="84"/>
+        <location filename="logindialog.cpp" line="102"/>
         <source>UserID or Password is incorrect.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -178,8 +254,8 @@ Developer : EachOne</source>
     <name>MainWindow</name>
     <message>
         <location filename="mainwindow.ui" line="21"/>
-        <location filename="mainwindow.cpp" line="29"/>
         <location filename="mainwindow.cpp" line="30"/>
+        <location filename="mainwindow.cpp" line="31"/>
         <source>TireManagement</source>
         <translation type="unfinished"></translation>
     </message>
@@ -189,55 +265,60 @@ Developer : EachOne</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="115"/>
-        <location filename="mainwindow.cpp" line="91"/>
+        <location filename="mainwindow.ui" line="116"/>
+        <location filename="mainwindow.cpp" line="101"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="118"/>
+        <location filename="mainwindow.ui" line="119"/>
         <source>Ctrl+X</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="127"/>
+        <location filename="mainwindow.ui" line="128"/>
         <source>Configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="130"/>
+        <location filename="mainwindow.ui" line="131"/>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="139"/>
+        <location filename="mainwindow.ui" line="140"/>
         <source>Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="148"/>
-        <location filename="mainwindow.ui" line="151"/>
+        <location filename="mainwindow.ui" line="149"/>
+        <location filename="mainwindow.ui" line="152"/>
         <source>Main</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="160"/>
-        <location filename="mainwindow.cpp" line="97"/>
+        <location filename="mainwindow.ui" line="161"/>
+        <location filename="mainwindow.cpp" line="107"/>
         <source>Logout</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="30"/>
+        <location filename="mainwindow.ui" line="170"/>
+        <source>AdminMode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="31"/>
         <source>Executing...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="92"/>
+        <location filename="mainwindow.cpp" line="102"/>
         <source>Are you exit application?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="98"/>
+        <location filename="mainwindow.cpp" line="108"/>
         <source>Are you Logout application?</source>
         <translation type="unfinished"></translation>
     </message>

@@ -28,10 +28,9 @@ private slots:
     void on_actionMain_triggered();
     void on_tabWidget_tabCloseRequested(int index);
     void on_actionConfiguration_triggered();
-
     void on_actionLogout_triggered();
-
     void on_actionAdminMode_triggered();
+    bool isAdmin();
 
 private:
     void closeEvent(QCloseEvent *event);
@@ -47,8 +46,7 @@ private:
     void TrayIconInit();
     void SettingInit();
     void TabInit();
-    bool isTabEnabled(const QString &TabName);
-    bool isAdmin();
+    bool isTabEnabled(const QString &TabName);    
 };
 
 #endif // MAINWINDOW_H

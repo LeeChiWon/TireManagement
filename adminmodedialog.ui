@@ -38,6 +38,12 @@
      <height>301</height>
     </rect>
    </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SingleSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
+   </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Modify">
    <property name="enabled">
@@ -179,6 +185,16 @@
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_UserID</tabstop>
+  <tabstop>lineEdit_Password</tabstop>
+  <tabstop>pushButton_New</tabstop>
+  <tabstop>pushButton_Modify</tabstop>
+  <tabstop>pushButton_Delete</tabstop>
+  <tabstop>pushButton_Find</tabstop>
+  <tabstop>pushButton_Return</tabstop>
+  <tabstop>tableView</tabstop>
+ </tabstops>
  <resources>
   <include location="tiremanagement.qrc"/>
  </resources>

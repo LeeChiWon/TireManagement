@@ -23,14 +23,14 @@ int main(int argc, char *argv[])
     {
         QMessageBox::information(&w,QObject::tr("TireManagement"),QObject::tr("Executing..."),QMessageBox::Ok);
         exit(0);
-    }
-
+    }   
     QSplashScreen *splashScreen=new QSplashScreen;
     splashScreen->setPixmap(QPixmap(":/img/waiting.png"));
     splashScreen->show();
     QTimer::singleShot(1000,splashScreen,SLOT(close()));
     LoginDialog loginDlg;
     QObject::connect(&loginDlg,SIGNAL(LoginOK()),&w,SLOT(show()));
+    QObject::connect(&loginDlg,SIGNAL(LoginOK()),&w,SLOT(isAdmin()));
     QTimer::singleShot(1000,&loginDlg,SLOT(show()));
 
    // loginDlg.show();
